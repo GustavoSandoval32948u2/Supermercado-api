@@ -25,7 +25,7 @@ namespace supermercado.API.Data
             new Producto
             {
                 Id = 3,
-                Nombre = "Galletas",
+                Nombre = "CocaCola",
                 Precio = 5,
                 Stock = 40
             },
