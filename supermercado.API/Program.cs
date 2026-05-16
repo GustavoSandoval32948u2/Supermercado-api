@@ -1,5 +1,6 @@
-
 using supermercado.API.Data;
+using supermercado.API.Services;
+using supermercado.API.BackgroundServices;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -22,6 +23,16 @@ namespace supermercado.API
                 });
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // azure queue storage - singleton porque QueueClient es thread-safe
+            builder.Services.AddSingleton<QueueService>();
+
+            // email service
+            builder.Services.AddTransient<EmailService>();
+
+            // worker que corre en background revisando la cola cada 10 segundos
+            builder.Services.AddHostedService<QueueConsumerWorker>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
