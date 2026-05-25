@@ -1,0 +1,124 @@
+version: '3.8'
+
+# 🎯 DOCKER COMPOSE MAESTRO - SELECTOR DE VERSIONES
+# Este archivo integra todas las versiones en un solo lugar
+# Elige la configuración que necesites descomentando
+
+# █████████████████████████████████████████████████████████████
+# 1️⃣ DESARROLLO SIMPLE (1 API + DB + Load Balancer)
+# █████████████████████████████████████████████████████████████
+
+# DESCOMENTA ESTA SECCIÓN PARA DESARROLLO
+# docker-compose -f docker-compose.yml up -d
+
+# █████████████████████████████████████████████████████████████
+# 2️⃣ MICROSERVICIOS (2+ APIs + Load Balancer)
+# █████████████████████████████████████████████████████████████
+
+# DESCOMENTA ESTA SECCIÓN PARA MICROSERVICIOS
+# docker-compose -f docker-compose.microservices.yml up -d
+
+# █████████████████████████████████████████████████████████████
+# 3️⃣ PRODUCCIÓN (Docker Compose)
+# █████████████████████████████████████████████████████████████
+
+# DESCOMENTA ESTA SECCIÓN PARA PRODUCCIÓN
+# docker-compose -f docker-compose.prod.yml --env-file .env.prod up -d
+
+# █████████████████████████████████████████████████████████████
+# 4️⃣ KUBERNETES (Auto-scaling, Orquestación)
+# █████████████████████████████████████████████████████████████
+
+# DESCOMENTA ESTA SECCIÓN PARA KUBERNETES
+# kubectl apply -f kubernetes-sqlserver.yml
+# kubectl apply -f kubernetes-deployment.yml
+
+# █████████████████████████████████████████████████████████████
+# 🎯 USA EL CLI MAESTRO PARA FACILITAR (RECOMENDADO)
+# █████████████████████████████████████████████████████████████
+
+# Linux/Mac:
+#   ./supermarket-cli.sh help
+#   ./supermarket-cli.sh up 1        (Desarrollo)
+#   ./supermarket-cli.sh up 2        (Microservicios)
+#   ./supermarket-cli.sh up 3        (Kubernetes)
+#   ./supermarket-cli.sh up 4        (Producción)
+
+# Windows PowerShell:
+#   .\supermarket-cli.ps1 help
+#   .\supermarket-cli.ps1 up 1
+#   .\supermarket-cli.ps1 up 2
+#   .\supermarket-cli.ps1 up 3
+#   .\supermarket-cli.ps1 up 4
+
+# █████████████████████████████████████████████████████████████
+# 📖 DOCUMENTACIÓN SEGÚN VERSIÓN
+# █████████████████████████████████████████████████████████████
+
+# Desarrollo:
+#   SETUP.md
+#   README_DOCKER.md
+#   TESTING_GUIDE.md > Test 1
+
+# Microservicios:
+#   CONTAINERIZATION.md
+#   TESTING_GUIDE.md > Test 2
+#   ARCHITECTURE.md > Opción 2
+
+# Kubernetes:
+#   CONTAINERIZATION.md > Kubernetes
+#   TESTING_GUIDE.md > Test 3
+#   kubernetes-deployment.yml
+#   ARCHITECTURE.md > Opción 3
+
+# Producción:
+#   CONTAINERIZATION_SUMMARY.md
+#   docker-compose.prod.yml
+#   nginx.conf
+
+# █████████████████████████████████████████████████████████████
+# 🚀 INICIO RÁPIDO POR VERSIÓN
+# █████████████████████████████████████████████████████████████
+
+# DESARROLLO (2 min):
+#   cp .env.example .env.local
+#   docker-compose up -d
+#   curl http://localhost:5000/swagger
+
+# MICROSERVICIOS (5 min):
+#   cp .env.example .env.local
+#   docker-compose -f docker-compose.microservices.yml up -d
+#   ./scale.sh load-test 10
+
+# KUBERNETES (20 min):
+#   cp .env.example .env.local
+#   ./deploy-k8s.sh
+#   kubectl port-forward svc/supermercado-api-service 5000:80 -n supermercado
+#   curl http://localhost:5000/swagger
+
+# PRODUCCIÓN (30 min):
+#   cp .env.example .env.prod
+#   # Editar .env.prod con valores reales
+#   docker-compose -f docker-compose.prod.yml --env-file .env.prod up -d
+
+# █████████████████████████████████████████████████████████████
+# 📊 COMPARATIVA RÁPIDA
+# █████████████████████████████████████████████████████████████
+
+#                    │ Dev    │ Micro  │ K8s    │ Prod
+# ────────────────────┼────────┼────────┼────────┼──────
+# Instancias API      │ 1      │ 2-N    │ 2-10   │ 1-N
+# Auto-scaling        │ ❌     │ ❌     │ ✅     │ Manual
+# Load Balancer       │ Nginx  │ Nginx  │ K8s    │ Nginx
+# Complejidad         │ 🟢     │ 🟡     │ 🔴     │ 🟡
+# Setup               │ 2 min  │ 5 min  │ 20 min │ 30 min
+# Producción listo    │ ❌     │ ⚠️     │ ✅     │ ✅
+
+# █████████████████████████████████████████████████████████████
+# 🔧 SELECCIONA TU VERSIÓN
+# █████████████████████████████████████████████████████████████
+
+# Para instrucciones detalladas, ver:
+# - INTEGRATION_GUIDE.md (Este archivo)
+# - FILES_INDEX.md (Índice de todos los archivos)
+# - CONTAINERIZATION.md (Guía completa)
