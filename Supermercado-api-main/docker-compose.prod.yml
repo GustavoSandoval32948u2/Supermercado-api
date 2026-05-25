@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: supermercado-sqlserver-prod
+    environment:
+      SA_PASSWORD: ${SA_PASSWORD}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data_prod:/var/opt/mssql/data
+      - sqlserver_logs_prod:/var/opt/mssql/log
+      - sqlserver_backup_prod:/var/opt/mssql/backup
+    networks:
+      - supermercado-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -Q 'SELECT 1' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    restart: on-failure
+    security_opt:
+      - no-new-privileges:true
+
+  api:
+    build:
+      context: .
+      dockerfile: configs/docker/Dockerfile
+    container_name: supermercado-api-prod
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=${SQL_DATABASE};User Id=${SQL_USER};Password=${SA_PASSWORD};TrustServerCertificate=True;"
+      ASPNETCORE_URLS: http://+:80
+      JWT_KEY: ${JWT_KEY}
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - supermercado-network
+    restart: on-failure
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: supermercado-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./configs/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - api
+    networks:
+      - supermercado-network
+    restart: on-failure
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  sqlserver_data_prod:
+    driver: local
+  sqlserver_logs_prod:
+    driver: local
+  sqlserver_backup_prod:
+    driver: local
+
+networks:
+  supermercado-network:
+    driver: bridge

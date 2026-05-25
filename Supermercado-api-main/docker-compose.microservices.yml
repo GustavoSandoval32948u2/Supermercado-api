@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: supermercado-sqlserver
+    environment:
+      SA_PASSWORD: ${SA_PASSWORD:-SuperMercado123!}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "${SQL_PORT:-1433}:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql/data
+      - sqlserver_logs:/var/opt/mssql/log
+      - sqlserver_backup:/var/opt/mssql/backup
+    networks:
+      - supermercado-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD:-SuperMercado123!} -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+
+  # API - Instancia 1
+  api-1:
+    build:
+      context: .
+      dockerfile: configs/docker/Dockerfile
+    container_name: supermercado-api-1
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=${SQL_DATABASE:-SupermercadoDB};User Id=${SQL_USER:-sa};Password=${SA_PASSWORD:-SuperMercado123!};TrustServerCertificate=True;"
+      ASPNETCORE_URLS: http://+:80
+      LOG_LEVEL: ${LOG_LEVEL:-Information}
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - supermercado-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    expose:
+      - "80"
+
+  # API - Instancia 2
+  api-2:
+    build:
+      context: .
+      dockerfile: configs/docker/Dockerfile
+    container_name: supermercado-api-2
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=${SQL_DATABASE:-SupermercadoDB};User Id=${SQL_USER:-sa};Password=${SA_PASSWORD:-SuperMercado123!};TrustServerCertificate=True;"
+      ASPNETCORE_URLS: http://+:80
+      LOG_LEVEL: ${LOG_LEVEL:-Information}
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - supermercado-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    expose:
+      - "80"
+
+  # Load Balancer (Nginx)
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: supermercado-nginx
+    volumes:
+      - ./configs/nginx/nginx.microservices.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "${API_PORT:-5000}:80"
+    depends_on:
+      - api-1
+      - api-2
+    networks:
+      - supermercado-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  sqlserver_data:
+    driver: local
+  sqlserver_logs:
+    driver: local
+  sqlserver_backup:
+    driver: local
+
+networks:
+  supermercado-network:
+    driver: bridge
