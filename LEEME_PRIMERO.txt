@@ -1,0 +1,6 @@
+Este ZIP contiene solo los archivos nuevos o modificados para la parte de Hector Jesus.
+
+Para integrarlo, copia todo su contenido encima de la carpeta principal del proyecto original:
+Supermercado-api-main/Supermercado-api-main/
+
+Si prefieres no copiar manualmente, usa el ZIP completo Supermercado_Hector_Entrega.zip.
