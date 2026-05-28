@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api\\load-test-productos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|solutionrelative:supermercado.api\\load-test-productos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api\\controllers\\testperformancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|solutionrelative:supermercado.api\\controllers\\testperformancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149B108F-5FD0-4C0E-8F0F-8C5E935529F9}|supermercado.API.Tests\\supermercado.API.Tests.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api.tests\\apicontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{149B108F-5FD0-4C0E-8F0F-8C5E935529F9}|supermercado.API.Tests\\supermercado.API.Tests.csproj|solutionrelative:supermercado.api.tests\\apicontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|solutionrelative:supermercado.api\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api\\data\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|solutionrelative:supermercado.api\\data\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|c:\\users\\sando\\onedrive\\escritorio\\supermercado-api-main\\supermercado-api-main\\supermercado\\supermercado.api\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C52CAD5-30BA-4923-898D-5F65563B66EE}|supermercado.API\\supermercado.API.csproj|solutionrelative:supermercado.api\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "load-test-productos.js",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\load-test-productos.js",
+              "RelativeDocumentMoniker": "supermercado.API\\load-test-productos.js",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\load-test-productos.js",
+              "RelativeToolTip": "supermercado.API\\load-test-productos.js",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-28T17:22:22.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestPerformanceController.cs",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\TestPerformanceController.cs",
+              "RelativeDocumentMoniker": "supermercado.API\\Controllers\\TestPerformanceController.cs",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\TestPerformanceController.cs",
+              "RelativeToolTip": "supermercado.API\\Controllers\\TestPerformanceController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T17:19:55.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Data\\Producto.cs",
+              "RelativeDocumentMoniker": "supermercado.API\\Data\\Producto.cs",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Data\\Producto.cs",
+              "RelativeToolTip": "supermercado.API\\Data\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T16:59:04.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "supermercado.API\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "supermercado.API\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T16:52:24.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API.Tests\\ApiControllerTests.cs",
+              "RelativeDocumentMoniker": "supermercado.API.Tests\\ApiControllerTests.cs",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API.Tests\\ApiControllerTests.cs",
+              "RelativeToolTip": "supermercado.API.Tests\\ApiControllerTests.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAANQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T16:40:49.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "supermercado.API\\Controllers\\VentasController.cs",
+              "ToolTip": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\supermercado.API\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "supermercado.API\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T07:04:00.024Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

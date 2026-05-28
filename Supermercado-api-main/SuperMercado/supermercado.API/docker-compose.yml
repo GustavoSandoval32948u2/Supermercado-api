@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: supermercado-sqlserver
+    environment:
+      SA_PASSWORD: ${SA_PASSWORD:-SuperMercado123!}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - supermercado-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "exit 0"]
+
+  api:
+    build:
+      context: .
+      dockerfile: configs/docker/Dockerfile
+    container_name: supermercado-api
+    ports:
+      - "8080:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=SupermercadoDB;User Id=sa;Password=SuperMercado123!;TrustServerCertificate=True;"
+    depends_on:
+      - sqlserver
+    networks:
+      - supermercado-network
+    restart: unless-stopped
+
+volumes:
+  sqlserver_data:
+
+networks:
+  supermercado-network:
+    driver: bridge

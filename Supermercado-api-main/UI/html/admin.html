@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Admin Productos</h1>
+</header>
+
+<main>
+
+<h3>Crear producto</h3>
+
+<input id="nombre" placeholder="Nombre">
+<input id="descripcion" placeholder="Descripción">
+<input id="precio" type="number" placeholder="Precio">
+<input id="stock" type="number" placeholder="Stock">
+<input id="categoria" placeholder="Categoría">
+
+
+<button onclick="crearProducto()">Crear</button>
+
+<h3>Lista</h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+</main>
+
+<script src="/scripts/api.js"></script>
+<script src="/scripts/admin.js"></script>
+
+</body>
+</html>

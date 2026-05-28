@@ -1,0 +1,14 @@
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\bin\Debug\net8.0\Supermercado.SimuladorCompras.exe
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\bin\Debug\net8.0\Supermercado.SimuladorCompras.deps.json
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\bin\Debug\net8.0\Supermercado.SimuladorCompras.runtimeconfig.json
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\bin\Debug\net8.0\Supermercado.SimuladorCompras.dll
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\bin\Debug\net8.0\Supermercado.SimuladorCompras.pdb
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.AssemblyInfoInputs.cache
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.AssemblyInfo.cs
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.csproj.CoreCompileInputs.cache
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.dll
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\refint\Supermercado.SimuladorCompras.dll
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.pdb
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\Supermercado.SimuladorCompras.genruntimeconfig.cache
+C:\Users\ChristopherBerganza\Downloads\Supermercado-api-main\Supermercado-api-main\Supermercado.SimuladorCompras\obj\Debug\net8.0\ref\Supermercado.SimuladorCompras.dll

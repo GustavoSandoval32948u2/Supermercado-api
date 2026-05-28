@@ -1,0 +1,46 @@
+# Dockerfile.prod
+# Versión optimizada para producción con Multi-stage build
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
+WORKDIR /src
+
+COPY ["supermercado.API/supermercado.API.csproj", "supermercado.API/"]
+RUN dotnet restore "supermercado.API/supermercado.API.csproj"
+
+COPY . .
+RUN dotnet build "supermercado.API/supermercado.API.csproj" -c Release -o /app/build
+
+RUN dotnet publish "supermercado.API/supermercado.API.csproj" \
+    -c Release \
+    -o /app/publish \
+    --no-restore \
+    --self-contained false
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine
+
+# Instalar curl para health check
+RUN apk add --no-cache curl
+
+WORKDIR /app
+
+# Usuario no-root
+RUN addgroup -g 1000 appgroup && adduser -D -u 1000 -G appgroup appuser
+
+COPY --from=build --chown=appuser:appgroup /app/publish .
+COPY --chown=appuser:appgroup ./entrypoint.sh .
+
+RUN chmod +x entrypoint.sh
+
+USER appuser
+
+EXPOSE 80
+
+ENV ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_URLS=http://+:80
+ENV DOTNET_RUNNING_IN_CONTAINER=true
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+    CMD curl -f http://localhost/health || exit 1
+
+ENTRYPOINT ["./entrypoint.sh"]

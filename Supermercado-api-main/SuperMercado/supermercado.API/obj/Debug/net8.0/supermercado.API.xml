@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>supermercado.API</name>
+    </assembly>
+    <members>
+        <member name="T:supermercado.API.Migrations.Inicial">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Inicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Inicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Inicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.Ventas">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Ventas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Ventas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Ventas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.Proveedores">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Proveedores.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Proveedores.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.Proveedores.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.EstadoVenta">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.EstadoVenta.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.EstadoVenta.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.EstadoVenta.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.AgregarDetalleVenta">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AgregarDetalleVenta.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AgregarDetalleVenta.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AgregarDetalleVenta.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.AddCategoriaToProducto">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AddCategoriaToProducto.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AddCategoriaToProducto.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.AddCategoriaToProducto.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:supermercado.API.Migrations.FixDecimalPrecision">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.FixDecimalPrecision.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.FixDecimalPrecision.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:supermercado.API.Migrations.FixDecimalPrecision.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
