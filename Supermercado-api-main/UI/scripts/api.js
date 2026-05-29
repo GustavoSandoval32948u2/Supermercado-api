@@ -1,1 +1,1 @@
-const API = "http://localhost:5143/api";
+const API = "https://supermercado-api-app.azurewebsites.net/api";
