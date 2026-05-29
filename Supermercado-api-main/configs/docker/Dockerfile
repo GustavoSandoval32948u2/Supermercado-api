@@ -35,7 +35,7 @@ RUN dos2unix ./entrypoint.sh && \
     chmod +x ./entrypoint.sh
 
 # Usuario sin privilegios
-RUN useradd -m -u 1000 app && chown -R app:app /app
+RUN id -u app &>/dev/null || useradd -m -u 1000 app && chown -R app:app /app
 USER app
 
 # Exponer puertos

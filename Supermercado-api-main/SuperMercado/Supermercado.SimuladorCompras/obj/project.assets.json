@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sando\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\Supermercado.SimuladorCompras.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Supermercado-api-main\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\Supermercado.SimuladorCompras.csproj",
       "projectName": "Supermercado.SimuladorCompras",
-      "projectPath": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\Supermercado.SimuladorCompras.csproj",
-      "packagesPath": "C:\\Users\\sando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sando\\OneDrive\\Escritorio\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Downloads\\Supermercado-api-main\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\Supermercado.SimuladorCompras.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Downloads\\Supermercado-api-main\\Supermercado-api-main\\Supermercado-api-main\\SuperMercado\\Supermercado.SimuladorCompras\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

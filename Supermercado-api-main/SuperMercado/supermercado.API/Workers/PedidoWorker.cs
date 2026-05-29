@@ -47,14 +47,16 @@ namespace supermercado.API.Workers
                     if (mensaje == null)
                         continue;
 
-                    // 🔥 VALIDACIÓN DE ESTADO PRIMERO
                     var estadosValidos = new[]
-                    {
-                        "Pedido recibido",
-                        "Pedido despachado",
-                        "Pedido entregado",
-                        "Cancelado"
-                    };
+{
+    "Pedido recibido",
+    "Pedido despachado",
+    "Pedido entregado",
+    "Cancelado",
+    "Recibido",
+    "Despachado",
+    "Entregado"
+};
 
                     if (!estadosValidos.Contains(mensaje.Estado))
                     {
