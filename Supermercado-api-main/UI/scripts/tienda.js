@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 async function cargarProductos() {
 
     try {
-        const res = await fetch("https://localhost:7239/api/productos");
+        const res = await fetch(`${API}/productos`);
         const result = await res.json();
 
         console.log("API RESULT:", result);
@@ -43,7 +43,7 @@ async function cargarProductos() {
 
 function agregarCarrito(id) {
 
-    fetch(`https://localhost:7239/api/productos/${id}`)
+    fetch(`${API}/productos/${id}`)
         .then(r => r.json())
         .then(producto => {
 
